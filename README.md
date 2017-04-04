@@ -11,7 +11,7 @@ As Convention, a Datacamp JS plugin should:
     + `getState()`: this function will return the current state.
 - implement tests.
 - contains tags for every release (+ CHANGELOG eventually)
-- 
+
 ### NPM command
 ```
     npm run test // run unit test
@@ -20,5 +20,11 @@ As Convention, a Datacamp JS plugin should:
     npm run build // build the app in prod mode (+ do lint and test)
     npm run prepublish // run build
 ```
+
+### Libraries used (or useful)
+- `jest` is used as test runner.
+- `webpack` is used to build the library.
+- `rxjs` is an easy way to implement the mandatory `subscribe` function.
+- `babel` to write es6 code.
 
 Check the `src` and `test` folder to see how to create a DC plugin. 
