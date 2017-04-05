@@ -6,6 +6,7 @@ class HelloWorld extends Plugin {
     this.wordsRemaining = WORDS.slice();
     super.setState(this.wordsRemaining.shift());
   }
+  mergeNewState(newState) { return newState; }
   nextWord() { return super.setState(this.wordsRemaining.shift()); }
 }
 

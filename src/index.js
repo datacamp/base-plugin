@@ -12,9 +12,10 @@ class Plugin {
   }
 
   getState() { return this.subject$.getValue(); }
+  mergeNewState(newState) { return { ...this.state, ...newState }; }
   setState(newState) {
-    this.state = newState;
-    this.subject$.next(newState);
+    this.state = this.mergeNewState(newState);
+    this.subject$.next(this.state);
   }
 }
 
