@@ -15,8 +15,8 @@ describe('Tests plugin base class', () => {
     unsubscriber1();
     plugin.setState({ hello: 'you', extra: 'infos' });
     unsubscriber2();
-    expect(states1).toEqual([null, { hello: 'world' }]);
-    expect(states2).toEqual([null, { hello: 'world' }, { hello: 'you', extra: 'infos' }]);
+    expect(states1).toEqual([{}, { hello: 'world' }]);
+    expect(states2).toEqual([{}, { hello: 'world' }, { hello: 'you', extra: 'infos' }]);
     expect(plugin.getState()).toEqual({ hello: 'you', extra: 'infos' });
     expect(plugin.state).toEqual({ hello: 'you', extra: 'infos' });
   });

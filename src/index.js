@@ -2,7 +2,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 class Plugin {
   constructor() {
-    this.state = null;
+    this.state = {};
     this.subject$ = new BehaviorSubject(this.state);
   }
 
