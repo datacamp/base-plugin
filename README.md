@@ -1,5 +1,5 @@
 # plugins-boilerplate
-JS boilerplate to create plugins
+JS boilerplate to create plugins.
 
 As Convention, a Datacamp JS plugin should:
 - `export default` the plugin class.
@@ -11,6 +11,8 @@ As Convention, a Datacamp JS plugin should:
     + `getState()`: this function will return the current state.
 - implement tests.
 - contains tags for every release (+ CHANGELOG eventually)
+
+As an helper, a pluging class is created and exported in this repo. Feel free to extend your plugin using this one. It uses Rxjs as peer dependency for the subscribe mehtod.
 
 ### NPM command
 ```

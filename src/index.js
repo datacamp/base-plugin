@@ -1,12 +1,9 @@
-import Rx from 'rxjs/Rx';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
-export const WORDS = ['This', 'is', 'Hello', 'World'];
-
-class HelloWorld {
+class Plugin {
   constructor() {
-    this.wordsRemaining = WORDS.slice();
-    this.subject$ = new Rx.BehaviorSubject(this.wordsRemaining.shift());
-    this.updateState();
+    this.state = null;
+    this.subject$ = new BehaviorSubject(this.state);
   }
 
   subscribe(...arg) {
@@ -15,15 +12,10 @@ class HelloWorld {
   }
 
   getState() { return this.subject$.getValue(); }
-
-  updateState() { this.state = this.getState(); }
-
-  nextWord() {
-    const nextWord = this.wordsRemaining.shift();
-    this.subject$.next(nextWord);
-    this.updateState();
-    return nextWord;
+  setState(newState) {
+    this.state = newState;
+    this.subject$.next(newState);
   }
 }
 
-export default HelloWorld;
+export default Plugin;
