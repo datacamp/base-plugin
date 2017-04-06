@@ -1,8 +1,9 @@
-import HelloWorld, { WORDS } from '../src/helloWorld';
+import HelloWorld, { WORDS, PLUGIN_NAME } from '../src/helloWorld';
 
 describe('Tests Hello World plugin', () => {
   test('HelloWorld class', () => {
     expect(new HelloWorld()).toBeInstanceOf(HelloWorld);
+    expect(PLUGIN_NAME).toBe('HelloWorld');
   });
 
   test('HelloWorld class using ES5', () => {

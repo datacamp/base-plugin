@@ -1,8 +1,9 @@
-import Plugin from '../src/index';
+import Plugin, { PLUGIN_NAME } from '../src/index';
 
 describe('Tests plugin base class', () => {
   test('plugin class', () => {
     expect(new Plugin()).toBeInstanceOf(Plugin);
+    expect(PLUGIN_NAME).toBe('Plugin');
   });
 
   test('subscriptions', () => {

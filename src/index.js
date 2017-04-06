@@ -19,4 +19,5 @@ class Plugin {
   }
 }
 
+export const PLUGIN_NAME = 'Plugin';
 export default Plugin;

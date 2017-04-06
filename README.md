@@ -3,6 +3,7 @@ JS boilerplate to create plugins.
 
 As Convention, a Datacamp JS plugin should:
 - `export default` the plugin class.
+- `export PLUGIN_NAME` to export the name of the use .
 - `export` all the useful constants or/and function helpers.
 - have as instance variable (at least):
     + `state`: the current state.

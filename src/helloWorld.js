@@ -11,4 +11,5 @@ class HelloWorld extends Plugin {
 }
 
 export const WORDS = ['This', 'is', 'Hello', 'World'];
+export const PLUGIN_NAME = 'HelloWorld';
 export default HelloWorld;
