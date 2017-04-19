@@ -1,5 +1,5 @@
 {
-  "name": "plugins-boilerplate",
+  "name": "base-plugin",
   "version": "1.0.1",
   "description": "Boilerplate to create js plugins",
   "keywords": [
@@ -18,7 +18,7 @@
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/datacamp/plugins-boilerplate.git"
+    "url": "git+https://github.com/datacamp/base-plugin.git"
   },
   "license": "MIT",
   "devDependencies": {
