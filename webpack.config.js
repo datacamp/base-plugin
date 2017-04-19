@@ -4,7 +4,7 @@ module.exports = {
   output: {
     path: './lib',
     filename: 'index.js',
-    library: 'HelloWorld',
+    library: 'BasePlugin',
     libraryTarget: 'umd',
   },
   externals: [],
