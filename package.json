@@ -34,7 +34,6 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
     "jest": "^19.0.2",
-    "webpack": "^1.14.0",
-    "rxjs": ">= 5.0.1"
+    "webpack": "^1.14.0"
   }
 }
