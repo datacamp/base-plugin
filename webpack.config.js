@@ -7,12 +7,12 @@ module.exports = {
     library: 'HelloWorld',
     libraryTarget: 'umd',
   },
-  externals: [/^rxjs.*/],
+  externals: [],
   module: {
     loaders: [{
       test: /\.js$/,
       loader: 'babel',
       exclude: /node_modules/,
     }],
-  },
+  }
 };
