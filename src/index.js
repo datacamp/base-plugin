@@ -1,21 +1,26 @@
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+/* eslint-disable no-plusplus, guard-for-in, no-restricted-syntax */
 
 class Plugin {
   constructor() {
     this.state = {};
-    this.subject$ = new BehaviorSubject(this.state);
+    this.subscriberCount = 0;
+    this.subscribers = {};
   }
 
-  subscribe(...arg) {
-    const subscriber = this.subject$.subscribe(...arg);
-    return () => subscriber.unsubscribe();
+  subscribe(fn) {
+    const count = ++this.subscriberCount;
+    fn(this.state);
+    this.subscribers[count] = fn;
+    return () => delete this.subscribers[count];
   }
 
-  getState() { return this.subject$.getValue(); }
+  getState() { return this.state; }
   mergeNewState(newState) { return { ...this.state, ...newState }; }
   setState(newState) {
     this.state = this.mergeNewState(newState);
-    this.subject$.next(this.state);
+    for (const i in this.subscribers) {
+      this.subscribers[i](this.state);
+    }
   }
 }
 

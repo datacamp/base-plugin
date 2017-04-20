@@ -4,15 +4,15 @@ module.exports = {
   output: {
     path: './lib',
     filename: 'index.js',
-    library: 'HelloWorld',
+    library: 'BasePlugin',
     libraryTarget: 'umd',
   },
-  externals: [/^rxjs.*/],
+  externals: [],
   module: {
     loaders: [{
       test: /\.js$/,
       loader: 'babel',
       exclude: /node_modules/,
     }],
-  },
+  }
 };
