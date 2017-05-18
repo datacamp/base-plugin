@@ -1,4 +1,4 @@
-# plugins-boilerplate
+# base-plugin
 JS boilerplate to create plugins.
 
 As Convention, a Datacamp JS plugin should:
